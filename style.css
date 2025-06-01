@@ -534,14 +534,13 @@ input, button {
   transform: translateX(-100%); 
   white-space: nowrap; 
   text-align: left; 
-
   font-size: 1.5rem; 
   font-weight: bold; 
   margin: 0;         
   padding: 0;        
   line-height: normal;
   font-family: inherit;
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .right-form {
