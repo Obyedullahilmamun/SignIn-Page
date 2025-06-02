@@ -904,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Flip only on register button when it closes
 document.addEventListener('DOMContentLoaded', () => {
-  const resetBtn = document.querySelector('.reset-btn'); 
+  const resetBtn = document.querySelector('.register-btn'); 
   const loginBox = document.querySelector('.login');
 
   if (resetBtn && loginBox) {
