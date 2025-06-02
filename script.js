@@ -889,25 +889,27 @@ class WebGLHandler {
 const canvas = document.getElementById('shader-bg');
 const webGL = new WebGLHandler(canvas, fragmentShaderSource);
 
-// new
+//Flip only on forget password button when it closes
+document.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.querySelector('.reset-btn'); 
+  const loginBox = document.querySelector('.login');
 
-// This helps maintain positioning on resize
-window.addEventListener('resize', function() {
-  const demo = document.querySelector('.demo');
-  if (window.innerWidth >= 1024) {
-    demo.style.position = 'absolute';
-    demo.style.top = '50%';
-    demo.style.left = 'calc(50% + 30rem)';
-    demo.style.marginLeft = '-15rem';
-    demo.style.marginTop = '-26.5rem';
-  } else if (window.innerWidth >= 768) {
-    demo.style.position = 'absolute';
-    demo.style.left = '50%';
-    demo.style.marginLeft = '-15rem';
-  } else {
-    demo.style.position = 'relative';
-    demo.style.top = 'auto';
-    demo.style.left = 'auto';
-    demo.style.margin = '2rem auto';
+  if (resetBtn && loginBox) {
+    resetBtn.addEventListener('click', () => {
+      loginBox.classList.add('flip-out');
+    });
+  }
+
+});
+
+// Flip only on register button when it closes
+document.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.querySelector('.reset-btn'); 
+  const loginBox = document.querySelector('.login');
+
+  if (resetBtn && loginBox) {
+    resetBtn.addEventListener('click', () => {
+      loginBox.classList.add('flip-out');
+    });
   }
 });
